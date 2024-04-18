@@ -1,0 +1,322 @@
+/*
+MIT License
+
+Copyright (c) 2023 Akash Gandhawa
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+@keyframes animate1 {
+    0% {background-color: red; filter: drop-shadow(0px 0px 16px red);}
+    19% {background-color: red; filter: drop-shadow(0px 0px 16px red);}
+    21% {background-color: greenyellow; filter: drop-shadow(0px 0px 16px greenyellow);}
+    39% {background-color: greenyellow; filter: drop-shadow(0px 0px 16px greenyellow);}
+    41% {background-color: yellow; filter: drop-shadow(0px 0px 16px yellow);}
+    59% {background-color: yellow; filter: drop-shadow(0px 0px 16px yellow);}
+    61% {background-color: cyan; filter: drop-shadow(0px 0px 16px cyan);}
+    79% {background-color: cyan; filter: drop-shadow(0px 0px 16px cyan);}
+    81% {background-color: magenta; filter: drop-shadow(0px 0px 16px magenta);}
+    100% {background-color: magenta; filter: drop-shadow(0px 0px 16px magenta);}
+}
+
+@keyframes animate2 {
+    0% {background-color: magenta; filter: drop-shadow(0px 0px 16px magenta);}
+    19% {background-color: magenta; filter: drop-shadow(0px 0px 16px magenta);}
+    21% {background-color: red; filter: drop-shadow(0px 0px 16px red);}
+    39% {background-color: red; filter: drop-shadow(0px 0px 16px red);}
+    41% {background-color: greenyellow; filter: drop-shadow(0px 0px 16px greenyellow);}
+    59% {background-color: greenyellow; filter: drop-shadow(0px 0px 16px greenyellow);}
+    61% {background-color: yellow; filter: drop-shadow(0px 0px 16px yellow);}
+    79% {background-color: yellow; filter: drop-shadow(0px 0px 16px yellow);}
+    81% {background-color: cyan; filter: drop-shadow(0px 0px 16px cyan);}
+    100% {background-color: cyan; filter: drop-shadow(0px 0px 16px cyan);}
+}
+
+@keyframes animate3 {
+    0% {background-color: cyan; filter: drop-shadow(0px 0px 16px cyan);}
+    19% {background-color: cyan; filter: drop-shadow(0px 0px 16px cyan);}
+    21% {background-color: magenta; filter: drop-shadow(0px 0px 16px magenta);}
+    39% {background-color: magenta; filter: drop-shadow(0px 0px 16px magenta);}
+    41% {background-color: red; filter: drop-shadow(0px 0px 16px red);}
+    59% {background-color: red; filter: drop-shadow(0px 0px 16px red);}
+    61% {background-color: greenyellow; filter: drop-shadow(0px 0px 16px greenyellow)}
+    79% {background-color: greenyellow; filter: drop-shadow(0px 0px 16px greenyellow);}
+    81% {background-color: yellow; filter: drop-shadow(0px 0px 16px yellow);}
+    100% {background-color: yellow; filter: drop-shadow(0px 0px 16px yellow);}
+}
+
+@keyframes animate4 {
+    0% {background-color: yellow; filter: drop-shadow(0px 0px 16px yellow);}
+    19% {background-color: yellow; filter: drop-shadow(0px 0px 16px yellow);}
+    21% {background-color: cyan; filter: drop-shadow(0px 0px 16px cyan);}
+    39% {background-color: cyan; filter: drop-shadow(0px 0px 16px cyan);}
+    41% {background-color: magenta; filter: drop-shadow(0px 0px 16px magenta);}
+    59% {background-color: magenta; filter: drop-shadow(0px 0px 16px magenta);}
+    61% {background-color: red; filter: drop-shadow(0px 0px 16px red);}
+    79% {background-color: red; filter: drop-shadow(0px 0px 16px red);}
+    81% {background-color: greenyellow; filter: drop-shadow(0px 0px 16px greenyellow);}
+    100% {background-color: greenyellow; filter: drop-shadow(0px 0px 16px greenyellow);}
+}
+
+@keyframes animate5 {
+    0% {background-color: greenyellow; filter: drop-shadow(0px 0px 16px greenyellow);}
+    19% {background-color: greenyellow; filter: drop-shadow(0px 0px 16px greenyellow);}
+    21% {background-color: yellow; filter: drop-shadow(0px 0px 16px yellow);}
+    39% {background-color: yellow; filter: drop-shadow(0px 0px 16px yellow);}
+    41% {background-color: cyan; filter: drop-shadow(0px 0px 16px cyan);}
+    59% {background-color: cyan; filter: drop-shadow(0px 0px 16px cyan);}
+    61% {background-color: magenta; filter: drop-shadow(0px 0px 16px magenta);}
+    79% {background-color: magenta; filter: drop-shadow(0px 0px 16px magenta);}
+    81% {background-color: red; filter: drop-shadow(0px 0px 16px red);}
+    100% {background-color: red; filter: drop-shadow(0px 0px 16px red);}
+}
+
+body{
+    background-color: black;
+    margin: 0px !important;
+}
+table{
+    padding: 0px;
+    margin: auto;
+    position: absolute;
+    left: calc(50% - 372px) !important;
+    bottom: 32px !important;
+}
+td{
+    margin: 0px;
+    border: 1px solid transparent;
+}
+
+.container{
+    overflow: auto;
+}
+.base{
+    width: 702px !important;
+    height: 50px;
+    background: linear-gradient(to right,rgb(64, 28, 8),rgb(96, 60, 40),rgb(64, 28, 8));
+    position: fixed;
+    top: calc(100% - 102px) !important;
+    left: calc(50% - 350px) !important;
+    box-shadow: 0px 0px 8px rgb(80, 0, 0);
+    border-radius: 2px;
+}
+.statue{
+    width: 180px !important;
+    height: auto;
+    position: fixed;
+    top: calc(100% - 368px) !important;
+    left: calc(50% - 92px) !important;
+    border-radius: 24px;
+    border: 1px solid darkblue;
+    box-shadow: 0px 0px 16px darkcyan;
+}
+.dharma-wheel{
+    position: fixed; 
+    top: calc(100% - 520px) !important; 
+    left: calc(50% - 36px) !important;
+    z-index: 1;
+    filter: drop-shadow(0px 0px 8px gray)
+}
+.night-sky{
+    height: 50% !important;
+    width: 100% !important;
+    box-shadow: 0px -16px 16px black inset;
+    overflow: hidden;
+}
+.night-sky img, .night-lake img{
+    width: 100%;
+    height: auto;
+    filter: brightness(40%);
+}
+.moon img{
+    position: fixed;
+    top: 64px;
+    right: 64px;
+    width: 64px;
+    height: 64px;
+    filter: brightness(125%) drop-shadow(0px 0px 16px yellow);
+}
+.night-lake{
+    top: 50% !important;
+    width: 100% !important;
+    height: auto;
+    overflow: hidden;
+    filter: brightness(500%);
+}
+.lotus{
+    position: fixed;
+    bottom: 80px !important;
+    left: calc(50% - 160px) !important;
+    z-index: 1;
+    filter: drop-shadow(0px 0px 8px pink);
+}
+
+.b-flag{
+    position: fixed;
+    bottom: 56px !important;
+    z-index: 1;
+    filter: drop-shadow(0px 0px 8px gray)
+}
+.b-flag-left{
+    left: calc(50% - 284px) !important;
+}
+.b-flag-right{
+    left: calc(50% + 168px) !important;
+}
+.bo{
+    filter: drop-shadow(0px 0px 8px gray);
+    position: fixed;
+    top: calc(100% - 242px) !important;
+}
+.bo-l{
+    left: calc(50% - 332px) !important;
+}
+.bo-r{
+    left: calc(50% + 192px) !important;
+}
+.au-bo{
+    filter: drop-shadow(0px 0px 8px yellow);
+    position: fixed;
+    top: calc(100% - 432px) !important;
+}
+.au-bo-l{
+    left: calc(50% - 116px) !important;
+}
+.au-bo-r{
+    left: calc(50% + 56px) !important;
+}
+.wish-txt{
+    text-align: center;
+    font-family: cursive;
+    font-size: x-large;
+    color: white;
+    text-shadow: 0px 0px 8px yellow;
+}
+
+.led{
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    background-color: gray;
+    border: 1px solid black;
+    border-radius: 50%;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+}
+.led1{
+    animation-name: animate1;
+}
+.led2{
+    animation-name: animate2;
+}
+.led3{
+    animation-name: animate3;
+}
+.led4{
+    animation-name: animate4;
+}
+.led5{
+    animation-name: animate5;
+}
+.ml{
+    margin-left: 4px;
+}
+.mr{
+    margin-right: 4px;
+}
+.white{
+    background-color: white;
+    border-color: white;
+}
+.red{
+    background-color: red;
+    border-color: red;
+}
+.yellow{
+    background-color: yellow;
+    border-color: yellow;
+}
+.blue{
+    background-color: cyan;
+    border-color: cyan;
+}
+.orange{
+    background-color: orange;
+    border-color: orange;
+}
+.container-lg{
+    display: none;
+}
+.container-sm .content{
+    display: block;
+    position: absolute;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    border: 1px solid darkturquoise;
+    background: radial-gradient(midnightblue, black);
+    padding: 0px 32px;
+    box-shadow: 0px 0px 32px darkcyan;
+}
+.container-sm footer{
+    color: antiquewhite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    top: 92% !important;
+    left: 0% !important;
+    width: 100%;
+}
+.container-sm h1,h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    text-align: center;
+}
+.container-sm h1{
+    font-size: 4em;
+    color: white;
+    text-shadow: 0px 0px 8px cyan;
+}
+.container-sm h1 > .br-b{
+    color: lightblue;
+}
+.container-sm h1 > .br-y{
+    color: lightyellow;
+}
+.container-sm h1 > .br-r{
+    color: lightcoral;
+}
+.container-sm h1 > .br-w{
+    color: whitesmoke;
+}
+.container-sm h1 > .br-o{
+    color: lightsalmon;
+}
+.container-sm h2{
+    font-size: 2em;
+    color: yellow;
+}
+
+@media screen and (min-width: 759px) and (min-height: 539px){
+    .container-lg{
+        display: block !important;
+    }
+    .container-sm{
+        display: none !important;
+    }
+}
